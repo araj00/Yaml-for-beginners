@@ -1,0 +1,79 @@
+# specifying list type
+student: !!seq
+ - marks
+ - name
+ - roll no
+
+# same as
+student: [marks, name, roll no]
+
+# some of the keys of the seq will be empty
+# sparse seq
+sparse seq:
+ - hey
+ - how are you
+ -
+ - null
+
+# nested sequence
+cities:
+ -
+  - new delhi
+  - Pune
+ -
+  - Patna
+  - Karnataka
+
+# key: value pairs are called maps
+# !!map
+# nested mappings
+age: 12
+name: aman
+role:
+    home: son
+    office: software engineer
+
+# same as
+name: Aman
+role: {age: 70, job: student}
+
+# pairs: keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+# same as
+pair example: !!pairs [job: student, job: teacher]
+# this will be an array of hashtables
+
+# !!set will have unique values
+names: !!set
+ ? kunal
+ ? Anand
+ ? Aniket
+
+---
+# dictionary !!omap
+People: !!omap
+  - kunal:
+      name: Kunal kushwaha
+      age: 45
+      height: 678
+  - Rahul:
+      name: Rahul OP
+      age: 50
+      height: 456
+
+# reusable properties using anchor &base
+
+likings: &likes
+ fav fruits: mango
+ dislikes: grapes
+
+person1:
+ name: aman
+ <<: *likes
+
+

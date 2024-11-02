@@ -1,0 +1,44 @@
+# string variables and it is represented by three ways. Following are the three examples
+name: Aman Raj
+city: "Patna, India"
+school: 'st. karens high school'
+
+# to represent string into multiple lines we can use '|'
+bio: |
+ hey my name is aman raj.
+ i am a very calm person.
+# to represent string into single line but write with multiple lines inside yaml , you can use '>'
+message: >
+ this message will be
+ in single line.
+
+number: 45
+percentage: 87.4
+booleanValue: No # n, N, false, False, FALSE
+# same for true -> yes, y, Y, True, TRUE
+
+# specify the type
+zero: !!int 0
+positiveNum: !!int 32
+negativeNum: !!int -45
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x34
+commaValue: !!int +540_000 # 540,000
+exponential num: 2.3E12
+
+# floating point numbers
+marks: !!float 56.22
+infinite: !!float .inf
+not a num: .nan
+
+# null values
+age: !!null Null # null, NULL, ~
+~: this is a null key
+
+# dates and time
+date: !!timestamp 2002-09-21
+india time: 2001-09-12T02:34:21.10 +5:30
+no time zone: 2001-09-12T02:34:21.10
+
+

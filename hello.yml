@@ -1,0 +1,23 @@
+# key-value data type
+"apple" : "I am a red fruit"
+1: "this is the second positive integer"
+---
+# Another way to represent key value pair
+{mango: "yellow fruit", apple: "Red fruit"}
+# to represent different document or what i mean different yaml data structure you need "---"
+---
+# lists
+- apple
+- mango
+- banana
+---
+# block data type
+cities:
+ - new delhi
+ - mumbai
+ - gujarat
+---
+# Another way to represent block data type using flow but only difference is []. This is used when you don't want to rely on identation.
+mycity: [Patna,Karnataka]
+#  to represent the end of the yaml we use "..."
+... 
